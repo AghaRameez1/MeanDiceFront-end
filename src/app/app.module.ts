@@ -12,6 +12,8 @@ import { InterceptorService } from './services/interceptor.service';
 import { HomeComponent } from './core/home/home.component';
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { RegisterComponent } from './core/register/register.component';
+import { ProfileComponent } from './core/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { FooterComponent } from './core/footer/footer.component';
     PageNotFoundComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterComponent,
+    ProfileComponent
   ],
   imports: [
     HttpClientModule,

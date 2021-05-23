@@ -32,12 +32,11 @@ export class LoginComponent implements OnInit {
       this.loading=false;
       return;
     }
-    console.log(value);
     this.login.loginUser(value).subscribe((res: ApiResponse) =>{
-      console.log(res)
       if(res.code == 200){
+        localStorage.setItem('user',JSON.stringify(res.id))
         Swal.fire('User Authenticated','','success');
-        this.route.navigateByUrl('')
+        this.route.navigateByUrl('profile')
       }else{
         Swal.fire('User Error','','error')
       }

@@ -15,4 +15,13 @@ export class LoginService {
       catchError(err=> of({error:true,err:err,message:'Server Error', data:[]})));
   }
 
+  registerUser(data){
+    return this.httpservice.post('/api/register',data).pipe(
+      catchError(err=> of({error:true,err:err,message:'Server Error', data:[]})));
+  }
+
+  checkUser(data){
+    return this.httpservice.get('/api/userfind?id='+data).pipe(
+      catchError(err=> of({error:true,err:err,message:'Server Error', data:[]})));
+  }
 }

@@ -5,4 +5,5 @@ export interface ApiResponse {
   err?: string,
   data: Array<any>
   code: number;
+  id: any
 }
