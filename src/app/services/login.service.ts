@@ -24,4 +24,8 @@ export class LoginService {
     return this.httpservice.get('/api/userfind?id='+data).pipe(
       catchError(err=> of({error:true,err:err,message:'Server Error', data:[]})));
   }
+  updateUser(data){
+    return this.httpservice.put('/api/updateUser',data).pipe(
+      catchError(err=> of({error:true,err:err,message:'Server Error', data:[]})));
+  }
 }

@@ -3,7 +3,7 @@ export interface ApiResponse {
   error: boolean,
   message: string,
   err?: string,
-  data: Array<any>
+  data: any;
   code: number;
   id: any
 }
